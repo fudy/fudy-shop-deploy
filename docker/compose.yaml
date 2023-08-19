@@ -1,0 +1,44 @@
+version: '3.5'
+services:
+  redis:
+    extends:
+      file: redis/compose.yaml
+      service: redis
+
+  mysql:
+    extends:
+      file: mysql/compose.yaml
+      service: mysql
+
+  xxl-job:
+    depends_on:
+      - mysql
+    extends:
+      file: xxl-job/compose.yaml
+      service: xxl-job
+
+  nacos:
+    depends_on:
+      - mysql
+    extends:
+      file: nacos/compose.yaml
+      service: nacos
+
+  elasticsearch:
+    extends:
+      file: elasticsearch/compose.yaml
+      service: elasticsearch 
+
+  nginx:
+    depends_on:
+      - minio
+    extends: 
+      file: nginx/compose.yaml
+      service: nginx
+
+  minio:
+    extends:
+      file: minio/compose.yaml
+      service: minio
+networks:
+  fudy-network:

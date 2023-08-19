@@ -1,0 +1,20 @@
+version: '3.5'
+services:
+  minio:
+    image: minio/minio:latest
+    container_name: fudy-minio
+    ports:
+      - 9000:9000
+      - 9090:9090
+    networks:
+      - fudy-network 
+    volumes:
+      - /opt/docker/minio/data:/data
+      - /opt/docker/minio/conf:/root/.minio
+    environment:
+      - MINIO_ACCESS_KEY=minioadmin
+      - MINIO_SECRET_KEY=minioadmin
+    command:
+      server /data --console-address ":9090" -address ":9000"
+networks:
+  fudy-network:

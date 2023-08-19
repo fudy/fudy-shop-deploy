@@ -1,0 +1,15 @@
+version: '3.5'
+services:
+  nginx:
+    image: nginx:latest
+    container_name: fudy-nginx
+    ports:
+      - 80:80
+    networks:
+      - fudy-network 
+    volumes:
+      - /opt/docker/nginx/nginx.conf:/etc/nginx/nginx.conf
+      - /opt/docker/nginx/logs:/var/log/nginx
+    privileged: true
+networks:
+  fudy-network:

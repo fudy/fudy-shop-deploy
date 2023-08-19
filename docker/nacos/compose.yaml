@@ -1,0 +1,18 @@
+version: '3.5'
+services:
+  nacos:
+    image: nacos/nacos-server:v2.2.0
+    container_name: fudy-nacos
+    ports:
+      - 8848:8848
+      - 9848:9848
+    networks:
+      - fudy-network 
+    volumes:
+      - /opt/docker/nacos/logs:/home/nacos/logs
+      - /opt/docker/nacos/conf/custom.properties:/home/nacos/init.d/custom.properties
+    environment:
+      - MODE=standalone
+    privileged: true
+networks:
+  fudy-network:
