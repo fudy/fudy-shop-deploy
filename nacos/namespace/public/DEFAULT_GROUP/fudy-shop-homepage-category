@@ -1,0 +1,66 @@
+[
+    {
+        "itemCategoryList": [
+            { "name" :"水果", "url" : ""},
+            { "name" :"蔬菜", "url" : ""},
+            { "name" :"肉类", "url" : ""},
+            { "name" :"白酒", "categoryId" : 3}
+        ]
+    },
+    {
+        "itemCategoryList": [
+            { "name" :"图书", "url" : ""},
+            { "name" :"音乐", "url" : ""},
+            { "name" :"软件", "url" : ""},
+            { "name" :"办工", "url" : ""}
+        ]
+    },
+    {
+        "itemCategoryList": [
+            { "name" :"手机", "url" : ""},
+            { "name" :"数码", "url" : ""},
+            { "name" :"电脑", "url" : ""},
+            { "name" :"电器", "url" : ""}
+        ]
+    },
+    {
+        "itemCategoryList": [
+            { "name" :"家居", "url" : ""},
+            { "name" :"家具", "url" : ""},
+            { "name" :"家装", "url" : ""},
+            { "name" :"厨具", "url" : ""}
+        ]
+    },
+    {
+        "itemCategoryList": [
+            { "name" :"汽车", "url" : ""},
+            { "name" :"房产", "url" : ""},
+            { "name" :"健身", "url" : ""},
+            { "name" :"娱乐", "url" : ""}
+        ]
+    },
+    {
+        "itemCategoryList": [
+            { "name" :"宠物", "url" : ""},
+            { "name" :"运动", "url" : ""},
+            { "name" :"户外", "url" : ""},
+            { "name" :"室内", "url" : ""}
+        ]
+    },
+    {
+        "itemCategoryList": [
+            { "name" :"钟表", "url" : ""},
+            { "name" :"首饰", "url" : ""},
+            { "name" :"黄金", "url" : ""},
+            { "name" :"白银", "url" : ""}
+        ]
+    },
+    {
+        "itemCategoryList": [
+            { "name" :"医药", "url" : ""},
+            { "name" :"保健", "url" : ""},
+            { "name" :"洗护", "url" : ""},
+            { "name" :"健身", "url" : ""}
+        ]
+    }
+]
