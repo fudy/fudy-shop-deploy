@@ -9,6 +9,7 @@ services:
       - fudy-network 
     volumes:
       - /opt/docker/nginx/nginx.conf:/etc/nginx/nginx.conf
+      - /opt/docker/nginx/sites-enabled:/etc/nginx/sites-enabled
       - /opt/docker/nginx/logs:/var/log/nginx
       - /opt/docker/nginx/html:/usr/share/nginx/html
     privileged: true
