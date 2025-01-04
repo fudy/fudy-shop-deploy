@@ -1,0 +1,30 @@
+version: '3.8'
+services:
+  namesrv:
+    image: apache/rocketmq:5.3.1
+    container_name: fudy-rocketmq-nameserver
+    ports:
+      - 9876:9876
+    networks:
+      - fudy-network
+    command: sh mqnamesrv
+  broker:
+    image: apache/rocketmq:5.3.1
+    container_name: rudy-rocketmq-broker
+    ports:
+      - 10909:10909
+      - 10911:10911
+      - 10912:10912
+      - 8080:8080
+      - 8081:8081
+    volumes:
+      - /opt/docker/rocketmq/broker.conf:/home/rocketmq/rocketmq-5.3.1/conf/broker.conf
+    environment:
+      - NAMESRV_ADDR=fudy-rocketmq-nameserver:9876
+    depends_on:
+      - namesrv    
+    networks:
+      - fudy-network
+    command: sh mqbroker --enable-proxy -c /home/rocketmq/rocketmq-5.3.1/conf/broker.conf
+networks:
+    fudy-network:
